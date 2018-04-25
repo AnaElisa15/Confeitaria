@@ -1,12 +1,69 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class KitController
+    public class KitController
     {
+
+        // INSERT
+        public static void SalvarKit(Kit kit)
+        {
+            ContextoSingleton.Instancia.TblKit.Add(kit);
+            ContextoSingleton.Instancia.SaveChanges();
+        }
+
+        public static List<Kit> ListarTodosKits()
+        {
+            List<Kit> list = ContextoSingleton.Instancia.TblKit.ToList(); //IQueryable
+
+            if (list.Count > 0)
+            {
+                return list;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static void ExcluirKit(int id)
+        {
+
+            Kit kitAtual = ContextoSingleton.Instancia.TblKit.Find(id);
+
+            ContextoSingleton.Instancia.Entry(kitAtual).State =
+                System.Data.Entity.EntityState.Deleted;
+            ContextoSingleton.Instancia.SaveChanges();
+
+        }
+
+        public static Kit PesquisarPorID(int IDKit)
+        {
+            return ContextoSingleton.Instancia.TblKit.Find(IDKit);
+        }
+
+        public static List<Kit> PesquisarPorNome(string nome)
+        {
+
+            var c = (from x in ContextoSingleton.Instancia.TblKit
+                     where x.Nome.ToLower().Trim().Equals(nome.ToLower().Trim())
+                     select x).ToList();
+
+            if (c.Count > 0)
+            {
+                return c;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

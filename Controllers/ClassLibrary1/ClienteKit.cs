@@ -13,6 +13,5 @@ namespace Models
         public int KitID { get; set; }
         public virtual Cliente _Cliente { get; set; }
         public virtual Kit _Kit { get; set; }
-
     }
 }

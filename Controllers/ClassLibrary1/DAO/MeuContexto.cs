@@ -24,7 +24,7 @@ namespace Sistema.Models.DAO
 
      public DbSet<Pedido> TblPedido { get; set; }
 
-     public DbSet<ClienteKit> TblClientesKit { get; set; }
+     public DbSet<ClienteKit> TblClienteKit { get; set; }
 
      public DbSet<PedidoKit> TblPedidoKit { get; set; }
 
