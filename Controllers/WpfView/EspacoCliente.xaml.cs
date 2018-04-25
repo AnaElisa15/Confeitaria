@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para EspacoCliente.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EspacoCliente : Page
     {
-        public MainWindow()
+        public EspacoCliente()
         {
             InitializeComponent();
-        }
-
-        private void BtnCliente_Click(object sender, RoutedEventArgs e)
-        {
-            EspacoCliente ec = new EspacoCliente();
-            this.Close();
-            ec.ShowDialog();
         }
     }
 }

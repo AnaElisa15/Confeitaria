@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para ListaKit.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ListaKit : Page
     {
-        public MainWindow()
+        public ListaKit()
         {
             InitializeComponent();
-        }
-
-        private void BtnCliente_Click(object sender, RoutedEventArgs e)
-        {
-            EspacoCliente ec = new EspacoCliente();
-            this.Close();
-            ec.ShowDialog();
         }
     }
 }
