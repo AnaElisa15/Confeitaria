@@ -47,7 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ClienteController.cs" />
+    <Compile Include="ClienteKitController.cs" />
+    <Compile Include="ContextoSingleton.cs" />
+    <Compile Include="EnderecoController.cs" />
+    <Compile Include="KitController.cs" />
+    <Compile Include="PedidoController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

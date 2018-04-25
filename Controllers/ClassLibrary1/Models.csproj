@@ -47,7 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteKit.cs" />
+    <Compile Include="DAO\MeuContexto.cs" />
+    <Compile Include="Endereco.cs" />
+    <Compile Include="Kit.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="PedidoKit.cs" />
+    <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
