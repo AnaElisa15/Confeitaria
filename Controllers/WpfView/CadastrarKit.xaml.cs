@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +20,8 @@ namespace WpfView
     /// <summary>
     /// Interação lógica para CadastrarKit.xam
     /// </summary>
-    public partial class CadastrarKit : Page
+    public partial class CadastrarKit : Window
+
     {
         public CadastrarKit()
         {
@@ -27,32 +30,28 @@ namespace WpfView
 
         private void btnVoltar_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow m = new MainWindow();
+            this.Close();
+            m.ShowDialog();
         }
 
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
+            {
+                MessageBox.Show("Cadastro relizado");
+            }
 
         }
-
-        private void txtDescricao_TextChanged(object sender, TextChangedEventArgs e)
+        
+        private Kit SalvarKit (string Nome, string Descricao, double Preco, int QtdPessoa)
         {
+            Kit kit = new Kit();
+            kit.Nome = Nome;
+            kit.Descricao = Descricao;
+            kit.QtdPessoa = QtdPessoa;
+            kit.Preco = Preco;
 
-        }
-
-        private void txtNome_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txtQtdPessoa_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txtPreco_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            return kit;
         }
     }
 }

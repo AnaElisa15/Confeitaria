@@ -74,7 +74,7 @@ namespace WpfView
             return cli;
         }
 
-        private Endereco SalvarEndereco(string Rua, int Num, string Bairro, string Compl, string Refe)
+        private Endereco SalvarEndereco(string Rua, int Num, string Bairro, string Compl)
         {
             Endereco end = new Endereco();
             end.Rua = Rua;
@@ -86,5 +86,13 @@ namespace WpfView
 
             return end;
         }
+
+        private void btnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            this.Close();
+            m.ShowDialog();
+        }
+
     }
 }

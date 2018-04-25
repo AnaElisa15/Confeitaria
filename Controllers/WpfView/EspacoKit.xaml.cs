@@ -27,17 +27,17 @@ namespace WpfView
 
         private void btnLista_Click(object sender, RoutedEventArgs e)
         {
-
+            ListaKit lk = new ListaKit();
         }
 
         private void btnNovo_Click(object sender, RoutedEventArgs e)
         {
-
+            CadastrarKit ck = new CadastrarKit();
         }
 
         private void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
-
+            ExcluirKit ek = new ExcluirKit();
         }
     }
 }

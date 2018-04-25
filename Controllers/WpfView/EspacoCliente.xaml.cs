@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para EspacoCliente.xam
+    /// Interação lógica para EspacoCliente.xaml
     /// </summary>
-    public partial class EspacoCliente : Page
+    public partial class EspacoCliente : Window
     {
         public EspacoCliente()
         {
@@ -28,23 +28,22 @@ namespace WpfView
         private void btnNovo_Click(object sender, RoutedEventArgs e)
         {
             CadastrarCliente cc = new CadastrarCliente();
-            this.Close();
-            cc.ShowDialog();
-
+            cc.ShowDiaLog();
         }
 
         private void btnLista_Click(object sender, RoutedEventArgs e)
         {
-
+            ListaCliente lc = new ListaCliente();
         }
 
         private void btnEditar_Click(object sender, RoutedEventArgs e)
         {
-
+            EditarCliente ec = new EditarCliente();
         }
 
         private void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
+            ExcluirCliente exc = new ExcluirCliente();
 
         }
     }

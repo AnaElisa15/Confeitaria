@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
+
 namespace WpfView
 {
     /// <summary>
@@ -25,28 +26,23 @@ namespace WpfView
         {
             InitializeComponent();
         }
-
+        
         private void BtnCliente_Click(object sender, RoutedEventArgs e)
         {
             EspacoCliente ec = new EspacoCliente();
-            this.Close();
-            ec.ShowDialog();
-        }
-
-        private void btnPedido_Click(object sender, RoutedEventArgs e)
-        {
-            PedidoCliente pc = new PedidoCliente();
-            this.Close();
-            pc.ShowDialog();
-
+            ec.ShowDiaLog();
         }
 
         private void btnKit_Click(object sender, RoutedEventArgs e)
         {
             EspacoKit ek = new EspacoKit();
-            this.Close();
-            ek.ShowDialog();
 
         }
+
+        private void btnPedido_Click(object sender, RoutedEventArgs e)
+        {
+            PedidoCliente pc = new PedidoCliente();
+        }
+    }
     }
 }

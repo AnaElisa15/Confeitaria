@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,16 +25,24 @@ namespace WpfView
         public ListaCliente()
         {
             InitializeComponent();
-        }
-
-        private void gridCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            MostrarClientes();
         }
 
         private void btnVoltar_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow m = new MainWindow();
+            m.ShowDialog();
+        }
+
+        private void MostrarClientes()
+        {
+            List<Cliente> dt = ClienteController.ListarTodosClientes();
+            if (dt != null)
+            {
+                gridCliente.ItemsSource = dt;
+            }
 
         }
+
     }
 }

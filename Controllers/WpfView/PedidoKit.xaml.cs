@@ -18,7 +18,7 @@ namespace WpfView
     /// <summary>
     /// Interação lógica para PedidoKit.xam
     /// </summary>
-    public partial class PedidoKit : Page
+    public partial class PedidoKit : Window
     {
         public PedidoKit()
         {
