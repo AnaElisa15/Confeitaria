@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para Pedido.xam
+    /// Interação lógica para PedidoFim.xam
     /// </summary>
-    public partial class Pedido : Page
+    public partial class PedidoFim : Page
     {
-        public Pedido()
+        public PedidoFim()
         {
             InitializeComponent();
+        }
+
+        private void btnConfirmar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,14 +1,49 @@
-﻿<Page x:Class="WpfView.CadastrarCliente"
+﻿<Window x:Class="WpfView.CadastrarCliente"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfView"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="CadastrarCliente">
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="CadastrarCliente" Height="504.878">
 
-    <Grid>
-        
+    <Grid Margin="0,0,2,-2">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Wheat" Offset="0.09"/>
+                <GradientStop Color="Wheat" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" ></ColumnDefinition>
+            <ColumnDefinition Width="2*" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="734" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="10,10,0,0">
+            <Label Content="                        Cadastro de Novo Cliente" HorizontalAlignment="Left" Width="729" FontSize="30" VerticalAlignment="Center" Height="42" FontWeight="DemiBold" FontFamily="Swis721 BdOul BT" FontStyle="Italic" Canvas.Left="3"/>
+            <Label Content="Nome:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.931,-0.34" FontFamily="Arial" FontSize="20" Canvas.Left="10" Canvas.Top="62" Height="32"/>
+            <TextBox x:Name="txtNomeCliente" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="546" BorderThickness="0,0,0,1" Canvas.Left="159" Canvas.Top="67" TextChanged="txtNomeCliente_TextChanged"/>
+            <Label Content="CPF:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.931,-0.34" FontFamily="Arial" FontSize="20" Canvas.Left="10" Canvas.Top="104" Height="32" Width="127"/>
+            <TextBox x:Name="txtCpfCliente" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="546" BorderThickness="0,0,0,1" Canvas.Left="159" Canvas.Top="109" TextChanged="txtCpfCliente_TextChanged"/>
+            <Label Content="Telefone:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.931,-0.34" FontFamily="Arial" FontSize="20" Canvas.Left="10" Canvas.Top="148" Height="32" Width="127"/>
+            <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="546" BorderThickness="0,0,0,1" Canvas.Left="159" Canvas.Top="148" TextChanged="txtTelefone_TextChanged"/>
+            <Label Content="Rua:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.931,-0.34" FontFamily="Arial" FontSize="20" Canvas.Left="10" Canvas.Top="189" Height="32" Width="127"/>
+            <TextBox x:Name="txtRua" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="546" BorderThickness="0,0,0,1" Canvas.Left="159" Canvas.Top="189" TextChanged="txtRua_TextChanged"/>
+            <Label Content="Bairro:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.931,-0.34" FontFamily="Arial" FontSize="20" Canvas.Left="10" Canvas.Top="231" Height="32" Width="127"/>
+            <TextBox x:Name="txtBairro" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="546" BorderThickness="0,0,0,1" Canvas.Left="159" Canvas.Top="310" TextChanged="txtBairro_TextChanged"/>
+            <Label Content="Número:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.931,-0.34" FontFamily="Arial" FontSize="20" Canvas.Left="10" Canvas.Top="273" Height="32" Width="127"/>
+            <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="546" BorderThickness="0,0,0,1" Canvas.Left="159" Canvas.Top="267" TextChanged="txtNumero_TextChanged"/>
+            <Label Content="Comple.:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.931,-0.34" FontFamily="Arial" FontSize="20" Canvas.Left="10" Canvas.Top="310" Height="32" Width="127"/>
+            <TextBox x:Name="txtComplemento" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="546" BorderThickness="0,0,0,1" Canvas.Left="159" Canvas.Top="230" TextChanged="txtComplemento_TextChanged"/>
+        </Canvas>
+        <Button x:Name="btnSalvar" Content="Salvar"   Width="145" FontFamily="Arial" FontSize="20" Click="btnSalvar_Click" Margin="217,215,0,36" Grid.Row="1" HorizontalAlignment="Left" Grid.RowSpan="2"/>
+        <Button x:Name="btnVoltar" Content="Voltar" Width="145" FontFamily="Arial" FontSize="20" Margin="43,215,196,36" Click="btnVoltar_Click" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"/>
+
     </Grid>
-</Page>
+</Window>

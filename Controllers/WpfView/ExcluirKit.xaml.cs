@@ -24,5 +24,30 @@ namespace WpfView
         {
             InitializeComponent();
         }
+
+        private void txtNomeCliente_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnPesquisar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void gridCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

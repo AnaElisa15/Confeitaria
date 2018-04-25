@@ -24,5 +24,20 @@ namespace WpfView
         {
             InitializeComponent();
         }
+
+        private void btnLista_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNovo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,5 +24,15 @@ namespace WpfView
         {
             InitializeComponent();
         }
+
+        private void gridCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

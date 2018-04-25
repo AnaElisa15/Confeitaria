@@ -24,5 +24,50 @@ namespace WpfView
         {
             InitializeComponent();
         }
+
+        private void btnEditar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void txtNomeCliente_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtCpfCliente_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtTelefone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtRua_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtComplemento_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtNumero_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtBairro_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

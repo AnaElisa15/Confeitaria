@@ -16,36 +16,29 @@ using System.Windows.Shapes;
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para EspacoCliente.xam
+    /// Interação lógica para PedidoKit.xam
     /// </summary>
-    public partial class EspacoCliente : Page
+    public partial class PedidoKit : Page
     {
-        public EspacoCliente()
+        public PedidoKit()
         {
             InitializeComponent();
         }
 
-        private void btnNovo_Click(object sender, RoutedEventArgs e)
-        {
-            CadastrarCliente cc = new CadastrarCliente();
-            this.Close();
-            cc.ShowDialog();
-
-        }
-
-        private void btnLista_Click(object sender, RoutedEventArgs e)
+        private void txtId_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void btnEditar_Click(object sender, RoutedEventArgs e)
+        private void btnVoltar_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        private void gridCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
     }
 }

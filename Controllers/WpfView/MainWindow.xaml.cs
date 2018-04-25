@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WpfView
 {
     /// <summary>
@@ -30,6 +31,22 @@ namespace WpfView
             EspacoCliente ec = new EspacoCliente();
             this.Close();
             ec.ShowDialog();
+        }
+
+        private void btnPedido_Click(object sender, RoutedEventArgs e)
+        {
+            PedidoCliente pc = new PedidoCliente();
+            this.Close();
+            pc.ShowDialog();
+
+        }
+
+        private void btnKit_Click(object sender, RoutedEventArgs e)
+        {
+            EspacoKit ek = new EspacoKit();
+            this.Close();
+            ek.ShowDialog();
+
         }
     }
 }
