@@ -24,10 +24,6 @@ namespace Sistema.Models.DAO
 
      public DbSet<Pedido> TblPedido { get; set; }
 
-     public DbSet<ClienteKit> TblClienteKit { get; set; }
-
-     public DbSet<PedidoKit> TblPedidoKit { get; set; }
-
          protected override void OnModelCreating(DbModelBuilder modelBuilder)
          {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

@@ -30,17 +30,23 @@ namespace WpfView
 
         private void btnNovoKit_Click(object sender, RoutedEventArgs e)
         {
-
+            CadastrarKit ck = new CadastrarKit();
+            ck.Show();
         }
 
         private void btnExcluirkKit_Click(object sender, RoutedEventArgs e)
         {
-
+            ExcluirKit ek = new ExcluirKit();
+            ek.Show();
         }
 
         private void btnListarKit_Click(object sender, RoutedEventArgs e)
         {
-
+            List<Kit> dg = KitController.ListarTodosKits();
+            if (dg != null)
+            {
+                dgKit.ItemsSource = dg.ToList();
+            }
         }
     }
 }

@@ -39,12 +39,12 @@ namespace WpfView
             LimparTextBoxes();
         }
 
-        private void PreencheDados(Cliente Dadoscliente)
+        private void PreencheDados(Kit Dadoskit)
         {
             txtNomeKit.Text = Dadoskit.Nome;
             txtDescricaoKit.Text = Dadoskit.Descricao;
-            txtQtdPessoaCliente.Text = Dadoskit.QtdPesso;
-            txtPrecoCliente.Text = Dadoskit.Preco;
+            txtQtdPessoaKit.Text = Dadoskit.QtdPessoa;
+            txtPrecoKit.Text = Dadoskit.Preco;
         }
 
         private void LimparTextBoxes()
@@ -56,12 +56,14 @@ namespace WpfView
             txtPrecoKit.Text = string.Empty;
             
         }
-    }
 
         private void btnVoltarKit_Click(object sender, RoutedEventArgs e)
         {
-            Kit k = new Kit();
-            k.Show();
+                Kit k = new Kit();
+                k.Show();
         }
     }
-}
+       
+      
+ }
+

@@ -8,7 +8,9 @@ namespace Models
 {
     public class Pedido
     {
-        public int NumeroPedidoID { get; set; }
-        public Decimal ValorTotal { get; set; }
+        public int PedidoID { get; set; }
+        public int ClienteID { get; set; }
+        public int KitID { get; set; }
+        public string DataEntrega { get; set; }
     }
 }

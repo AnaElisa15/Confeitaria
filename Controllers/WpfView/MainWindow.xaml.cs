@@ -41,7 +41,8 @@ namespace WpfView
 
         private void btnPedido_Click(object sender, RoutedEventArgs e)
         {
-            
+            MontarPedido mp = new MontarPedido();
+            mp.Show();
         }
     }
 

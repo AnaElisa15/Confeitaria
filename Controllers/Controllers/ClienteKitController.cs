@@ -9,7 +9,7 @@ namespace Controllers
 {
     public class ClienteKitController
     {
-        public static void SalvarItem(ClienteKit novo)
+        public static void SalvarItem(ClienteKitController novo)
         {
             ContextoSingleton.Instancia.TblClienteKit.Add(novo);
             ContextoSingleton.Instancia.SaveChanges();
