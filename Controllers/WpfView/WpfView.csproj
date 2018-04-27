@@ -57,6 +57,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CadastrarKit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -65,7 +69,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EditarKit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ExcluirCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExcluirKit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -84,14 +96,23 @@
     <Compile Include="CadastrarCliente.xaml.cs">
       <DependentUpon>CadastrarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarKit.xaml.cs">
+      <DependentUpon>CadastrarKit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.xaml.cs">
       <DependentUpon>Cliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditarCliente.xaml.cs">
       <DependentUpon>EditarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditarKit.xaml.cs">
+      <DependentUpon>EditarKit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ExcluirCliente.xaml.cs">
       <DependentUpon>ExcluirCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirKit.xaml.cs">
+      <DependentUpon>ExcluirKit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Kit.xaml.cs">
       <DependentUpon>Kit.xaml</DependentUpon>

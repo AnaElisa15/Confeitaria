@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <StackPanel>
+        <Grid Height="68" Background="LightYellow">
+            <StackPanel Height="20" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15">
+                <TextBlock Height="20" VerticalAlignment="Top">AREA DE EXCLUSÃO DE KITS</TextBlock>
+            </StackPanel>
+            <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
+            </StackPanel>
+
+        </Grid>
+        <Grid>
+            <TabControl HorizontalAlignment="Left" Height="450" Margin="0" VerticalAlignment="Top" Width="800">
+
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblIDKit" Content="Digite o ID do kit que deseja excluir:" HorizontalAlignment="Left" Height="28" Margin="102,30,0,0" VerticalAlignment="Top" Width="205" >
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.015"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                    <Label x:Name="lblNomeKit" Content="Nome:" HorizontalAlignment="Left" Height="25" Margin="34,109,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="2.394,0.9"/>
+                    <TextBox x:Name="txtNomeKit" HorizontalAlignment="Left" Height="22" Margin="106,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" BorderThickness="0,0,0,1"/>
+                    <Label x:Name="lblDescricaoKit" Content="Descrição:" HorizontalAlignment="Left" Height="25" Margin="34,167,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.058,0.48"/>
+                    <TextBox x:Name="txtDescricaoKit" HorizontalAlignment="Left" Height="23" Margin="106,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397" BorderThickness="0,0,0,1"/>
+                    <Label x:Name="lblQtdPessoaKit" Content="Serve:" HorizontalAlignment="Left" Height="25" Margin="34,225,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.762,-0.52"/>
+                    <TextBox x:Name="txtQtdPessoaKit" HorizontalAlignment="Left" Height="24" Margin="106,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" BorderThickness="0,0,0,1"/>
+                    <Label x:Name="lblPrecoKit" Content="Preço:" HorizontalAlignment="Left" Height="24" Margin="34,271,0,0" VerticalAlignment="Top" Width="52"/>
+                    <TextBox x:Name="txtPrecoKit" HorizontalAlignment="Left" Height="23" Margin="106,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" BorderThickness="0,0,0,1"/>
+                    <Button x:Name="btnSalvarKit" Content="Salvar Alteração" HorizontalAlignment="Left" Height="40" Margin="536,127,0,0" VerticalAlignment="Top" Width="170" Background="LightGray" BorderBrush="Black" Click="btnSalvarKit_Click">
+                        <Button.Effect>
+                            <DropShadowEffect Direction="0" BlurRadius="15" ShadowDepth="1" RenderingBias="Quality" Color="Black"/>
+                        </Button.Effect>
+                    </Button>
+                    <Button x:Name="btnVoltarKit" Content="Voltar" HorizontalAlignment="Left" Height="40" Margin="536,243,0,0" VerticalAlignment="Top" Width="170" Background="LightGray" BorderBrush="Black" Click="btnVoltarKit_Click">
+                        <Button.Effect>
+                            <DropShadowEffect Direction="0" BlurRadius="15" ShadowDepth="1" RenderingBias="Quality" Color="Black"/>
+                        </Button.Effect>
+                    </Button>
+                    <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Height="25" Margin="481,30,0,0" VerticalAlignment="Top" Width="83" Background="LightGray" BorderBrush="Black" Click="btnPesquisar_Click" RenderTransformOrigin="0.5,0.5" >
+                        <Button.Effect>
+                            <DropShadowEffect Direction="0" BlurRadius="15" ShadowDepth="1" RenderingBias="Quality" Color="Black"/>
+                        </Button.Effect>
+                    </Button>
+                    <TextBox x:Name="txtIDKit" HorizontalAlignment="Left" Height="22" Margin="314,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" BorderThickness="0,0,0,1"/>
+                </Grid>
+
+
+            </TabControl>
+        </Grid>
+    </StackPanel>
+</Window>
