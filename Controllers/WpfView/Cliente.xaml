@@ -1,18 +1,17 @@
-﻿<Window x:Class="WpfView.MainWindow"
+﻿<Window x:Class="WpfView.Cliente"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="Cliente" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <StackPanel>
         <Grid Height="68">
             <StackPanel Height="20" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15">
                 <TextBlock Height="20" VerticalAlignment="Top">MENU DO CLIENTE</TextBlock>
             </StackPanel>
             <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
-
             </StackPanel>
         </Grid>
         <Grid>
@@ -28,9 +27,9 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="btnNovoCli" Content="NOVO CLIENTE" HorizontalAlignment="Left" Height="50" Margin="44,57,0,0" VerticalAlignment="Top" Width="118" Click="btnNovoCli_Click" />
                     <Button x:Name="btnEditarCli" Content="EDITAR" HorizontalAlignment="Left" Height="50" Margin="228,57,0,0" VerticalAlignment="Top" Width="118" Click="btnEditarCli_Click"/>
-                    <Button x:Name="btnExcluirCli" Content="EXCLUIR" HorizontalAlignment="Left" Height="50"  Margin="424,57,0,0" VerticalAlignment="Top" Width="118" Click="btnExcluirCli_Click"/>
+                    <Button x:Name="btnExcluir" Content="EXCLUIR" HorizontalAlignment="Left" Height="50"  Margin="424,57,0,0" VerticalAlignment="Top" Width="118" Click="btnExcluirCli_Click"/>
                     <Button x:Name="btnListarCli" Content="LISTA DE CLIENTES" HorizontalAlignment="Left" Height="50"  Margin="614,57,0,0" VerticalAlignment="Top" Width="118" Click="btnListarCli_Click" />
-                    <DataGrid x:Name="dgCliente" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="240" Margin="133,160,0,0" VerticalAlignment="Top" Width="524">
+                    <DataGrid x:Name="dgCliente" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="240" Margin="127,142,0,0" VerticalAlignment="Top" Width="524">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Path=ClienteID}"/>
                             <DataGridTextColumn Header="Nome" Binding="{Binding Path=Nome}"/>

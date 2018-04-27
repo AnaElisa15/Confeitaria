@@ -10,18 +10,37 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controllers;
+using Models;
+
 
 namespace WpfView
 {
     /// <summary>
-    /// Lógica interna para Kit.xaml
+    /// Interação lógica para EspacoKit.xam
     /// </summary>
     public partial class Kit : Window
     {
         public Kit()
         {
             InitializeComponent();
+        }
+
+        private void btnNovoKit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExcluirkKit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnListarKit_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -25,19 +25,24 @@ namespace WpfView
             InitializeComponent();
         }
 
+        private void BtnCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Cliente c = new Cliente();
+            c.Show();
+
+        }
+
         private void btnKit_Click(object sender, RoutedEventArgs e)
         {
+            var k = new Kit();
+            k.Show();
 
         }
 
         private void btnPedido_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btnCliente_Click(object sender, RoutedEventArgs e)
-        {
-
+            
         }
     }
+
 }

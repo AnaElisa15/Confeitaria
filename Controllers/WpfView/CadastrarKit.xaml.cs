@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,32 @@ namespace WpfView
         public CadastrarKit()
         {
             InitializeComponent();
+        }
+
+        private void btnSalvarKit_Click(object sender, RoutedEventArgs e)
+        {
+            Kit k = SalvarKit(txtNomeKit.Text, txtDescricaoKit.Text, double.Parse(txtPrecoKit.Text), int.Parse(txtQtdPessoaKit.Text));
+            MessageBox.Show("Cadastro relizado");
+        }
+
+        private Kit SalvarKit(string Nome, string Descricao, double Preco, int QtdPessoa)
+        {
+            Kit kit = new Kit();
+            kit.Nome = Nome;
+            kit.Descricao = Descricao;
+            kit.QtdPessoa = QtdPessoa;
+            kit.Preco = Preco;
+
+            KitController.SalvarKit(kit);
+
+            return kit;
+        }
+    }
+
+        private void btnVoltarKit_Click(object sender, RoutedEventArgs e)
+        {
+            Kit k = new Kit();
+            k.Show();
         }
     }
 }

@@ -22,7 +22,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="btnCliente" Content="CLIENTE" HorizontalAlignment="Left" Height="50" Margin="98,57,0,0" VerticalAlignment="Top" Width="180" Click="btnCliente_Click"/>
+                    <Button x:Name="btnCliente" Content="CLIENTE" HorizontalAlignment="Left" Height="50" Margin="98,57,0,0" VerticalAlignment="Top" Width="180" Click="BtnCliente_Click"/>
                     <Button x:Name="btnPedido" Content="PEDIDO" HorizontalAlignment="Left" Height="50" Margin="98,185,0,0" VerticalAlignment="Top" Width="180" Click="btnPedido_Click"/>
                     <Button x:Name="btnKit" Content="KIT" HorizontalAlignment="Left" Height="50"  Margin="98,321,0,0" VerticalAlignment="Top" Width="180" Click="btnKit_Click"/>
                     <Image  Source="imagens/confeitaria.png" Margin="398,10,36,30"/>

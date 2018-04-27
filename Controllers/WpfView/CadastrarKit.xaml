@@ -1,11 +1,11 @@
-﻿<Window x:Class="WpfView.MainWindow"
+﻿<Window x:Class="WpfView.CadastrarKit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="CadastrarKit" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <StackPanel>
         <Grid Height="68" Background="LightYellow">
             <StackPanel Height="20" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15">
