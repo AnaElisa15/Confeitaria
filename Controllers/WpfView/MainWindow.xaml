@@ -5,53 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="MainWindow" Background="{x:Null}" WindowStyle="ThreeDBorderWindow" ScrollViewer.VerticalScrollBarVisibility="Auto" WindowStartupLocation="CenterScreen" Width="776.659" Height="493.333" >
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <StackPanel>
+        <Grid Height="68">
+            <StackPanel Height="20" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15">
+                <TextBlock Height="20" VerticalAlignment="Top">SISTEMA CONFEITARIA</TextBlock>
+            </StackPanel>
+            <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
 
-    <Grid Margin="0,0,2,-2">
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Wheat" Offset="0.09"/>
-                <GradientStop Color="White" Offset="0.5"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" ></ColumnDefinition>
-            <ColumnDefinition Width="2*" ></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+            </StackPanel>
+        </Grid>
+        <Grid>
+            <TabControl HorizontalAlignment="Left" Height="450" Margin="0" VerticalAlignment="Top" Width="800">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+                <Grid Background="LightYellow">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnCliente" Content="CLIENTE" HorizontalAlignment="Left" Height="50" Margin="98,57,0,0" VerticalAlignment="Top" Width="180" Click="btnCliente_Click"/>
+                    <Button x:Name="btnPedido" Content="PEDIDO" HorizontalAlignment="Left" Height="50" Margin="98,185,0,0" VerticalAlignment="Top" Width="180" Click="btnPedido_Click"/>
+                    <Button x:Name="btnKit" Content="KIT" HorizontalAlignment="Left" Height="50"  Margin="98,321,0,0" VerticalAlignment="Top" Width="180" Click="btnKit_Click"/>
+                    <Image  Source="imagens/confeitaria.png" Margin="398,10,36,30"/>
+                </Grid>
 
-        <Canvas HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="734" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="9,21,0,0">
-            <Label Content=" Confeitaria Q'Delicia" HorizontalAlignment="Left" Width="731" FontSize="72" VerticalAlignment="Center" Height="95" FontWeight="DemiBold" FontFamily="Swis721 BdOul BT" FontStyle="Italic" Canvas.Left="3" Canvas.Top="13"/>
-            <Image Height="322" Source="confeitaria.png" Stretch="Fill" Width="278" Canvas.Left="348" Canvas.Top="108"/>
-        </Canvas>
-        <Button x:Name="btnCliente" Content="CLIENTE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="179" Height="49" Canvas.Left="440" Canvas.Top="219" FontSize="25" Click="BtnCliente_Click" Margin="34,161,0,0" Grid.RowSpan="2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Wheat" Offset="0"/>
-                    <GradientStop Color="Wheat" Offset="0.558"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btnKit" Content="KIT" HorizontalAlignment="Left" VerticalAlignment="Top" Width="179" Height="49" Canvas.Left="440" Canvas.Top="219" FontSize="25" Click="btnKit_Click" Margin="34,83,0,0" Grid.Row="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Wheat" Offset="0"/>
-                    <GradientStop Color="Wheat" Offset="0.558"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btnPedido" Content="PEDIDO" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="179" Height="49" Canvas.Left="440" Canvas.Top="219" FontSize="25" Click="btnPedido_Click" Margin="34,0,0,10" Grid.Row="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Wheat" Offset="0"/>
-                    <GradientStop Color="Wheat" Offset="0.558"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-    </Grid>
+            </TabControl>
+        </Grid>
+    </StackPanel>
 </Window>

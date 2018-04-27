@@ -10,44 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para ExcluirCliente.xam
+    /// Lógica interna para ExcluirCliente.xaml
     /// </summary>
-    public partial class ExcluirCliente : Page
+    public partial class ExcluirCliente : Window
     {
         public ExcluirCliente()
         {
             InitializeComponent();
-        }
-
-        private void btnExcluir_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnPesquisar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnVoltar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void gridCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void txtNomeCliente_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

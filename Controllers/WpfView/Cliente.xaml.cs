@@ -10,35 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para PedidoKit.xam
+    /// Lógica interna para Cliente.xaml
     /// </summary>
-    public partial class PedidoKit : Window
+    public partial class Cliente : Window
     {
-        public PedidoKit()
+        public Cliente()
         {
             InitializeComponent();
         }
-
-        private void txtId_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void btnVoltar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void gridCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
     }
 }

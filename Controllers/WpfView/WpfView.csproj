@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{285B8AC2-34C1-4EEC-B7CF-23C024692EEC}</ProjectGuid>
+    <ProjectGuid>{91445E52-75CE-48AC-BC63-DCC8DA106B31}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WpfView</RootNamespace>
     <AssemblyName>WpfView</AssemblyName>
@@ -33,14 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,7 +57,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CadastrarKit.xaml">
+    <Page Include="Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -72,27 +65,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EspacoCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EspacoKit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ExcluirCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ExcluirKit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ListaCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ListaKit.xaml">
+    <Page Include="Kit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,57 +84,24 @@
     <Compile Include="CadastrarCliente.xaml.cs">
       <DependentUpon>CadastrarCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CadastrarKit.xaml.cs">
-      <DependentUpon>CadastrarKit.xaml</DependentUpon>
+    <Compile Include="Cliente.xaml.cs">
+      <DependentUpon>Cliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditarCliente.xaml.cs">
       <DependentUpon>EditarCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EspacoCliente.xaml.cs">
-      <DependentUpon>EspacoCliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EspacoKit.xaml.cs">
-      <DependentUpon>EspacoKit.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ExcluirCliente.xaml.cs">
       <DependentUpon>ExcluirCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirKit.xaml.cs">
-      <DependentUpon>ExcluirKit.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListaCliente.xaml.cs">
-      <DependentUpon>ListaCliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListaKit.xaml.cs">
-      <DependentUpon>ListaKit.xaml</DependentUpon>
+    <Compile Include="Kit.xaml.cs">
+      <DependentUpon>Kit.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PedidoCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PedidoFim.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PedidoKit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PedidoCliente.xaml.cs">
-      <DependentUpon>PedidoCliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PedidoFim.xaml.cs">
-      <DependentUpon>PedidoFim.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PedidoKit.xaml.cs">
-      <DependentUpon>PedidoKit.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -175,7 +119,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -184,24 +127,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Models.csproj">
-      <Project>{6404ebea-24c9-4124-821c-331d1686cd8a}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{e50c5939-8c69-4b59-8e33-9dba936cc88a}</Project>
-      <Name>Controllers</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Imagens\confeitaria.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagens\cliente.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagens\kit.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

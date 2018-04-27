@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para PedidoFim.xam
+    /// Lógica interna para Kit.xaml
     /// </summary>
-    public partial class PedidoFim : Page
+    public partial class Kit : Window
     {
-        public PedidoFim()
+        public Kit()
         {
             InitializeComponent();
-        }
-
-        private void btnConfirmar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
