@@ -44,6 +44,7 @@ namespace WpfView
             MontarPedido mp = new MontarPedido();
             mp.Show();
         }
+
     }
 
 }

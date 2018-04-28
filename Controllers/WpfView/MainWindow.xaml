@@ -23,9 +23,18 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Button x:Name="btnCliente" Content="CLIENTE" HorizontalAlignment="Left" Height="50" Margin="98,57,0,0" VerticalAlignment="Top" Width="180" Click="BtnCliente_Click"/>
-                    <Button x:Name="btnPedido" Content="PEDIDO" HorizontalAlignment="Left" Height="50" Margin="98,185,0,0" VerticalAlignment="Top" Width="180" Click="btnPedido_Click"/>
-                    <Button x:Name="btnKit" Content="KIT" HorizontalAlignment="Left" Height="50"  Margin="98,321,0,0" VerticalAlignment="Top" Width="180" Click="btnKit_Click"/>
+                    <Button x:Name="btnPedido" Content="PEDIDO" HorizontalAlignment="Left" Height="50" Margin="98,191,0,0" VerticalAlignment="Top" Width="180" Click="btnPedido_Click"/>
+                    <Button x:Name="btnKit" Content="KIT" HorizontalAlignment="Left" Height="50"  Margin="98,317,0,0" VerticalAlignment="Top" Width="180" Click="btnKit_Click"/>
                     <Image  Source="imagens/confeitaria.png" Margin="398,10,36,30"/>
+                </Grid>
+                <Grid Background="LightYellow" Height="438" Width="794">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnCliente1" Content="CLIENTE" HorizontalAlignment="Left" Height="50" Margin="98,57,0,0" VerticalAlignment="Top" Width="180" Click="BtnCliente_Click"/>
+                    <Button x:Name="btnPedido1" Content="PEDIDO" HorizontalAlignment="Left" Height="50" Margin="98,149,0,0" VerticalAlignment="Top" Width="180" Click="btnPedido_Click"/>
+                    <Button x:Name="btnKit1" Content="KIT" HorizontalAlignment="Left" Height="50"  Margin="98,249,0,0" VerticalAlignment="Top" Width="180" Click="btnKit_Click"/>
+                    <Image  Source="Imagens/confeitaria.png" Margin="398,10,36,30"/>
                 </Grid>
 
             </TabControl>

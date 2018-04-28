@@ -39,7 +39,8 @@ namespace WpfView
 
         private void btnPesquisarCliente_Click(object sender, RoutedEventArgs e)
         {
-            PreencheDados(ObterDados());
+            Clientes cliente = ClienteController.PesquisarPorID(int.Parse(txtIDCliente.Text));
+            PreencheDados(cliente);
         }
 
         private Clientes ObterDados()
@@ -97,7 +98,7 @@ namespace WpfView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }
