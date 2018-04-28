@@ -48,5 +48,11 @@ namespace WpfView
             ExcluirKit ek = new ExcluirKit();
             ek.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

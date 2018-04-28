@@ -26,10 +26,10 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="btnNovoKit" Content="NOVO KIT" HorizontalAlignment="Left" Height="50" Margin="133,57,0,0" VerticalAlignment="Top" Width="118" Click="btnNovoKit_Click" />
-                    <Button x:Name="btnExcluirKit" Content="EXCLUIR" HorizontalAlignment="Left" Height="50"  Margin="337,57,0,0" VerticalAlignment="Top" Width="118" Click="btnExcluirKit_Click"/>
-                    <Button x:Name="btnListarKit" Content="LISTA DE KITS" HorizontalAlignment="Left" Height="50"  Margin="539,57,0,0" VerticalAlignment="Top" Width="118" Click="btnListarKit_Click" />
-                    <DataGrid x:Name="dgKit" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="240" Margin="133,160,0,0" VerticalAlignment="Top" Width="524">
+                    <Button x:Name="btnNovoKit" Content="NOVO KIT" HorizontalAlignment="Left" Height="50" Margin="133,40,0,0" VerticalAlignment="Top" Width="118" Click="btnNovoKit_Click" />
+                    <Button x:Name="btnExcluirKit" Content="EXCLUIR" HorizontalAlignment="Left" Height="50"  Margin="336,40,0,0" VerticalAlignment="Top" Width="118" Click="btnExcluirKit_Click" RenderTransformOrigin="0.475,0.11"/>
+                    <Button x:Name="btnListarKit" Content="LISTA DE KITS" HorizontalAlignment="Left" Height="50"  Margin="539,40,0,0" VerticalAlignment="Top" Width="118" Click="btnListarKit_Click" RenderTransformOrigin="0.504,-0.04" />
+                    <DataGrid x:Name="dgKit" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="240" Margin="133,142,0,0" VerticalAlignment="Top" Width="524" SelectionChanged="dgKit_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Path=KitID}"/>
                             <DataGridTextColumn Header="Nome" Binding="{Binding Path=Nome}"/>
@@ -38,8 +38,10 @@
                             <DataGridTextColumn Header="Preço" Binding="{Binding Path=Preco}"/>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Button Content="FECHAR" HorizontalAlignment="Left" Margin="682,388,0,30" Width="75" Click="Button_Click"/>
                 </Grid>
             </TabControl>
+
         </Grid>
     </StackPanel>
 </Window>

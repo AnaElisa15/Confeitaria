@@ -63,6 +63,11 @@ namespace WpfView
                 Kit k = new Kit();
                 k.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
        
       

@@ -67,5 +67,10 @@ namespace WpfView
             Cliente c = new Cliente();
             c.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

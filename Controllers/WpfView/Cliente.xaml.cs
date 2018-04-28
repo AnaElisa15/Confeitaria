@@ -54,5 +54,10 @@ namespace WpfView
             CadastrarCliente ccl = new CadastrarCliente();
             ccl.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
