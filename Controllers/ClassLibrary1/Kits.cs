@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Kit
+    public class Kits
     {
         public int KitID { get; set; }
         public string Nome { get; set; }

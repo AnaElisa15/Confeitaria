@@ -34,19 +34,19 @@ namespace WpfView
             ck.Show();
         }
 
-        private void btnExcluirkKit_Click(object sender, RoutedEventArgs e)
-        {
-            ExcluirKit ek = new ExcluirKit();
-            ek.Show();
-        }
-
         private void btnListarKit_Click(object sender, RoutedEventArgs e)
         {
-            List<Kit> dg = KitController.ListarTodosKits();
+            List<Models.Kits> dg = KitController.ListarTodosKits();
             if (dg != null)
             {
                 dgKit.ItemsSource = dg.ToList();
             }
+        }
+
+        private void btnExcluirKit_Click(object sender, RoutedEventArgs e)
+        {
+            ExcluirKit ek = new ExcluirKit();
+            ek.Show();
         }
     }
 }

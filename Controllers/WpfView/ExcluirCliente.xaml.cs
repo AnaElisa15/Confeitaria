@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace WpfView
 
         private void btnPesquisarCliente_Click(object sender, RoutedEventArgs e)
         {
-            Cliente cliente = ClienteController.PesquisarPorID(int.Parse(txtIDCliente.Text));
+            Clientes cliente = ClienteController.PesquisarPorID(int.Parse(txtIDCliente.Text));
             PreencheDados(cliente);
         }
 
@@ -38,13 +39,13 @@ namespace WpfView
             LimparTextBoxes();
 
         }
-        private void PreencheDados(Cliente Dadoscliente)
+        private void PreencheDados(Models.Clientes Dadoscliente)
         {
             txtNomeCliente.Text = Dadoscliente.Nome;
             txtCpfCliente.Text = Dadoscliente.Cpf;
             txtTelefoneCliente.Text = Dadoscliente.Telefone;
             txtRuaCliente.Text = Dadoscliente._Endereco.Rua;
-            txtBairroCliente = Dadoscliente;_Endereco.Bairro;
+            txtBairroCliente.Text = Dadoscliente._Endereco.Bairro;
             txtNumeroCliente.Text = Convert.ToString(Dadoscliente._Endereco.Numero);
             txtComplementoCliente.Text = Dadoscliente._Endereco.Complemento;
         }

@@ -13,15 +13,15 @@ namespace Controllers
     {
 
         // INSERT
-        public static void SalvarKit(Kit kit)
+        public static void SalvarKit(Kits kit)
         {
             ContextoSingleton.Instancia.TblKit.Add(kit);
             ContextoSingleton.Instancia.SaveChanges();
         }
 
-        public static List<Kit> ListarTodosKits()
+        public static List<Kits> ListarTodosKits()
         {
-            List<Kit> list = ContextoSingleton.Instancia.TblKit.ToList(); //IQueryable
+            List<Kits> list = ContextoSingleton.Instancia.TblKit.ToList(); //IQueryable
 
             if (list.Count > 0)
             {
@@ -36,7 +36,7 @@ namespace Controllers
         public static void ExcluirKit(int id)
         {
 
-            Kit kitAtual = ContextoSingleton.Instancia.TblKit.Find(id);
+            Kits kitAtual = ContextoSingleton.Instancia.TblKit.Find(id);
 
             ContextoSingleton.Instancia.Entry(kitAtual).State =
                 System.Data.Entity.EntityState.Deleted;
@@ -44,12 +44,12 @@ namespace Controllers
 
         }
 
-        public static Kit PesquisarPorID(int IDKit)
+        public static Kits PesquisarPorID(int IDKit)
         {
             return ContextoSingleton.Instancia.TblKit.Find(IDKit);
         }
 
-        public static List<Kit> PesquisarPorNome(string nome)
+        public static List<Kits> PesquisarPorNome(string nome)
         {
 
             var c = (from x in ContextoSingleton.Instancia.TblKit

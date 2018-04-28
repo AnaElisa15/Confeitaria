@@ -27,13 +27,13 @@ namespace WpfView
 
         private void btnSalvarKit_Click(object sender, RoutedEventArgs e)
         {
-            Kit k = SalvarKit(txtNomeKit.Text, txtDescricaoKit.Text, double.Parse(txtPrecoKit.Text), int.Parse(txtQtdPessoaKit.Text));
+            Models.Kits k = SalvarKit(txtNomeKit.Text, txtDescricaoKit.Text, double.Parse(txtPrecoKit.Text), int.Parse(txtQtdPessoaKit.Text));
             MessageBox.Show("Cadastro relizado");
         }
 
-        private Kit SalvarKit(string Nome, string Descricao, double Preco, int QtdPessoa)
+        private Models.Kits SalvarKit(string Nome, string Descricao, double Preco, int QtdPessoa)
         {
-            Kit kit = new Kit();
+            Models.Kits kit = new Models.Kits();
             kit.Nome = Nome;
             kit.Descricao = Descricao;
             kit.QtdPessoa = QtdPessoa;
@@ -43,7 +43,6 @@ namespace WpfView
 
             return kit;
         }
-    }
 
         private void btnVoltarKit_Click(object sender, RoutedEventArgs e)
         {

@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteController.cs" />
-    <Compile Include="ClienteKitController.cs" />
     <Compile Include="ContextoSingleton.cs" />
     <Compile Include="EnderecoController.cs" />
     <Compile Include="KitController.cs" />

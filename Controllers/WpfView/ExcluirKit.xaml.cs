@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,24 +28,24 @@ namespace WpfView
 
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
         {
-            Kit kit = KitController.PesquisarPorID(int.Parse(txtIdKit.Text));
-            PreencheDados(kit);
+            Kits kits = KitController.PesquisarPorID(int.Parse(txtIdKit.Text));
+            PreencheDados(kits);
         }
 
 
         private void btnExcluirKit_Click(object sender, RoutedEventArgs e)
         {
             KitController.ExcluirKit(int.Parse(txtIdKit.Text));
-            MessageBox.Show("Cliente Excluído com Sucesso!");
+            MessageBox.Show("Cliente Excluído");
             LimparTextBoxes();
         }
 
-        private void PreencheDados(Kit Dadoskit)
+        private void PreencheDados(Kits Dadoskit)
         {
             txtNomeKit.Text = Dadoskit.Nome;
             txtDescricaoKit.Text = Dadoskit.Descricao;
-            txtQtdPessoaKit.Text = Dadoskit.QtdPessoa;
-            txtPrecoKit.Text = Dadoskit.Preco;
+            txtQtdPessoaKit.Text = Dadoskit.QtdPessoa.ToString();
+            txtPrecoKit.Text = Dadoskit.Preco.ToString();
         }
 
         private void LimparTextBoxes()

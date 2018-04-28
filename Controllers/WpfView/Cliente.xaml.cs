@@ -30,7 +30,7 @@ namespace WpfView
 
         private void btnListarCli_Click(object sender, RoutedEventArgs e)
         {
-            List<Cliente> dg = ClienteController.ListarTodosClientes();
+            List<Clientes> dg = ClienteController.ListarTodosClientes();
             if (dg != null)
             {
                 dgCliente.ItemsSource = dg.ToList();

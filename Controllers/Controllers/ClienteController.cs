@@ -8,22 +8,22 @@ namespace Controllers
     public class ClienteController
     {
         // INSERT
-        public static void SalvarCliente(Cliente cliente)
+        public static void SalvarCliente(Clientes cliente)
         {
             ContextoSingleton.Instancia.TblCliente.Add(cliente);
             ContextoSingleton.Instancia.SaveChanges();
         }
 
-        public static List<Cliente> ListarTodosClientes()
+        public static List<Clientes> ListarTodosClientes()
         {
 
             return ContextoSingleton.Instancia.TblCliente.Include("_Endereco").ToList(); //IQueryable
         }
 
-        public static void EditarCliente(int id, Cliente novoCliente)
+        public static void EditarCliente(int id, Clientes novoCliente)
         {
 
-            Cliente clienteEdit = PesquisarPorID(id);
+            Clientes clienteEdit = PesquisarPorID(id);
 
             if (clienteEdit != null)
             {
@@ -41,7 +41,7 @@ namespace Controllers
         public static void ExcluirCliente(int id)
         {
 
-            Cliente clienteAtual = ContextoSingleton.Instancia.TblCliente.Find(id);
+            Clientes clienteAtual = ContextoSingleton.Instancia.TblCliente.Find(id);
 
             ContextoSingleton.Instancia.Entry(clienteAtual).State =
                 System.Data.Entity.EntityState.Deleted;
@@ -49,7 +49,7 @@ namespace Controllers
 
         }
 
-        public static List<Cliente> PesquisarPorNome(string nome)
+        public static List<Clientes> PesquisarPorNome(string nome)
         {
 
             var c = (from x in ContextoSingleton.Instancia.TblCliente
@@ -66,7 +66,7 @@ namespace Controllers
             }
         }
 
-        public static Cliente PesquisarPorID(int IDCliente)
+        public static Clientes PesquisarPorID(int IDCliente)
         {
             return ContextoSingleton.Instancia.TblCliente.Include("_Endereco").SingleOrDefault
                 (x => x.ClienteID == IDCliente && x._Endereco.EnderecoID == x.EnderecoID);

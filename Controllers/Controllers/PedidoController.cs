@@ -9,18 +9,18 @@ namespace Controllers
 {
     public class PedidoController
     {
-        static public void SalvarPedido(Pedido pedido)
+        static public void SalvarPedido(Pedidos pedido)
         {
 
             ContextoSingleton.Instancia.TblPedido.Add(pedido);
             ContextoSingleton.Instancia.SaveChanges();
         }
-        public static List<Pedido> ListarTodosPedidos()
+        public static List<Pedidos> ListarTodosPedidos()
         {
             return ContextoSingleton.Instancia.TblPedido.ToList();
         }
 
-        static public Pedido PesquisarPorID(int idPedido)
+        static public Pedidos PesquisarPorID(int idPedido)
         {
             return ContextoSingleton.Instancia.TblPedido.Find(idPedido);
         }
@@ -28,7 +28,7 @@ namespace Controllers
         static public void ExcluirPedido(int idPedido)
         {
 
-            Pedido p = ContextoSingleton.Instancia.TblPedido.Find(idPedido);
+            Pedidos p = ContextoSingleton.Instancia.TblPedido.Find(idPedido);
 
             ContextoSingleton.Instancia.Entry(p).State =
                 System.Data.Entity.EntityState.Deleted;

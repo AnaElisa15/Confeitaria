@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Cliente : Pessoa
+    public class Pedidos
     {
+        public int PedidoID { get; set; }
         public int ClienteID { get; set; }
+        public int KitID { get; set; }
+        public string DataEntrega { get; set; }
     }
 }

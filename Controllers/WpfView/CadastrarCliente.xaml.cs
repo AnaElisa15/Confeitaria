@@ -24,7 +24,7 @@ namespace WpfView
             if (VerificarItens() == true)
             {
                 Endereco end = SalvarEndereco(txtRuaCliente.Text, int.Parse(txtNumeroCliente.Text.Trim()), txtBairroCliente.Text, txtComplementoCliente.Text);
-                Cliente clinovo = SalvarCliente(txtNomeCliente.Text, txtCpfCliente.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", ""), txtTelefoneCliente.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", ""), end.EnderecoID);
+                Clientes clinovo = SalvarCliente(txtNomeCliente.Text, txtCpfCliente.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", ""), txtTelefoneCliente.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", ""), end.EnderecoID);
                 ClienteController.SalvarCliente(clinovo);
                 MessageBox.Show("Cadastro relizado");
             }
@@ -37,12 +37,12 @@ namespace WpfView
 
             if (!Regex.IsMatch(txtNomeCliente.Text, @"^[a-zA-Z]+$") || (txtNomeCliente.Text == null))
             {
-                MessageBox.Show("Invalido, só é aceito caracter.");
+                MessageBox.Show("Informação invalida. Só é aceito letras.");
                 return false;
             }
             else if ((!Regex.IsMatch(caracter, verifica) || txtCpfCliente.Text.Length.Equals(11) == false) || (txtCpfCliente.Text == null))
             {
-                MessageBox.Show("Invalido! O CPF deve conter 11 números.");
+                MessageBox.Show("Informação invalida. O CPF deve conter 11 números.");
                 return false;
             }
             else if (!Regex.IsMatch(txtTelefoneCliente.Text, verifica) || (txtTelefoneCliente.Text == null))
@@ -63,9 +63,9 @@ namespace WpfView
             }
         }
 
-        private Cliente SalvarCliente(string Nome, string CPF, string Telefone, int ID)
+        private Clientes SalvarCliente(string Nome, string CPF, string Telefone, int ID)
         {
-            Cliente cli = new Cliente();
+            Clientes cli = new Clientes();
             cli.Nome = Nome;
             cli.Cpf = CPF;
             cli.Telefone = Telefone;

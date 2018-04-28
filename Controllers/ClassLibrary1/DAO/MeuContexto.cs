@@ -16,13 +16,13 @@ namespace Sistema.Models.DAO
         Database.SetInitializer(new DropCreateDatabaseIfModelChanges<MeuContexto>());
         }
 
-     public DbSet<Cliente> TblCliente { get; set; }
+     public DbSet<Clientes> TblCliente { get; set; }
 
      public DbSet<Endereco> TblEndereco { get; set; }
 
-     public DbSet<Kit> TblKit { get; set; }
+     public DbSet<Kits> TblKit { get; set; }
 
-     public DbSet<Pedido> TblPedido { get; set; }
+     public DbSet<Pedidos> TblPedido { get; set; }
 
          protected override void OnModelCreating(DbModelBuilder modelBuilder)
          {
